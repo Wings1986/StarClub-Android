@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:id="@+id/backlayout"
+    >
+
+    <TextView
+        android:id="@+id/menuTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginLeft="45dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dip"
+        android:text="description"
+        android:textColor="@color/black"
+        android:textSize="18dip"
+         />
+
+</RelativeLayout>

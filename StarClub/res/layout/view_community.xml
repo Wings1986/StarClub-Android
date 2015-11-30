@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.basic.views.CommunityView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.mycom.lib.SegmentedRadioGroup
+        android:id="@+id/segment_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:checkedButton="@+id/button_one"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@id/button_one"
+            android:button="@null"
+            android:gravity="center"
+            android:minHeight="33dip"
+            android:minWidth="150dip"
+            android:text="Everyone"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/radio_colors" />
+
+        <RadioButton
+            android:id="@+id/button_two"
+            android:button="@null"
+            android:gravity="center"
+            android:minHeight="33dip"
+            android:minWidth="150dip"
+            android:text="Following"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/radio_colors" />
+        
+    </com.mycom.lib.SegmentedRadioGroup>
+
+    <com.mycom.lib.XListView
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white"
+        android:cacheColorHint="@android:color/white"
+        android:divider="@null" />
+
+</com.basic.views.CommunityView>

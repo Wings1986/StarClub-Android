@@ -1,0 +1,64 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="ActionBarCompat">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@layout/topbar_gradient</item>
+    </style>
+
+    <style name="ActionBarMenu">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/navigation_back</item>
+    </style>
+
+    <style name="LightTabWidget" parent="@android:style/Widget.TabWidget">
+        <item name="android:textColor">@color/tab_indicator_text</item>
+    </style>
+
+    <style name="ProgressBarStyle" parent="@android:style/Widget.Holo.ProgressBar.Horizontal" />
+
+    <!-- Button -->
+    <style name="btnNormalStyle">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="btnSelectStyle">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.GifMoviewView" parent="@android:style/Widget"></style>
+
+    <style name="MyCustomProgressStyle">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/seekbarcolors</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+        <item name="android:minHeight">10dp</item>
+        <item name="android:maxHeight">10dp</item>
+        <item name="android:thumbOffset">0dp</item>
+        <item name="android:thumb">@drawable/thumb</item>
+    </style>
+
+</resources>

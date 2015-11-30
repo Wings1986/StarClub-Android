@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.basic.views.MediaPlayerView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/toolLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/media_toolbar" >
+
+		<com.mycom.lib.gif.GifMovieView
+		    android:id="@+id/ivVolumn"
+		    android:layout_width="30dp"
+		    android:layout_height="30dp"
+		    android:layout_gravity="left|center_vertical"
+		    android:layout_marginLeft="10dp" 
+
+		    />        
+		    
+        <Button
+            android:id="@+id/btnOpen"
+            android:layout_width="52dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/media_btn_open" />
+    </FrameLayout>
+
+    <!-- Detail -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvPlaying"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Now playing"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:gravity="center_vertical"
+                android:text="User name"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnItune"
+                android:layout_width="135dp"
+                android:layout_height="44dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/btn_next"
+                android:text="Buy on Google"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="38dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/media_playbar" >
+
+        <Button
+            android:id="@+id/btnPrev"
+            android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/media_btn_prev" />
+
+        <Button
+            android:id="@+id/btnPlay"
+            android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/media_btn_play" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/media_btn_next" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/black" >
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@android:color/white"
+            android:cacheColorHint="@android:color/white" />
+    </LinearLayout>
+
+</com.basic.views.MediaPlayerView>

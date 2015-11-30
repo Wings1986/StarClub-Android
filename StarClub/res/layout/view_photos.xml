@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.basic.views.PhotosView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="#ffffff" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="42dp"
+            android:background="@drawable/media_playbar" >
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ffffff" >
+
+            <com.mycom.lib.CustomGridView.PullToRefreshGridView
+                xmlns:ptr="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/gridview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:horizontalSpacing="4dip"
+                android:numColumns="3"
+                android:padding="4dip"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="4dip"
+                ptr:ptrMode="both" />
+        </LinearLayout>
+    </LinearLayout>
+
+</com.basic.views.PhotosView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- selector of back button,the length is middle -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/transparent" android:state_focused="true" android:state_pressed="false" style="@style/btnSelectStyle" />
+    <item android:drawable="@color/transparent" android:state_focused="true" android:state_pressed="true" style="@style/btnSelectStyle" />
+    <item android:drawable="@color/transparent" android:state_focused="false" android:state_pressed="true" style="@style/btnSelectStyle" />
+    <item android:drawable="@color/transparent" android:state_focused="false" android:state_pressed="false" style="@style/btnNormalStyle"/>
+
+</selector>

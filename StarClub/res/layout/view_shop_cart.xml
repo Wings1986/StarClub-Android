@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.basic.views.ShopCartView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/navigation_back" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Shopping Cart"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/btn_back" />
+        
+         <Button
+            android:id="@+id/btnNext"
+            android:layout_width="63dp"
+            android:layout_height="32dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="5dp"
+            android:text="Next"
+            android:background="@drawable/btn_next" />
+    </FrameLayout>
+
+   <ListView
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white"
+        android:cacheColorHint="@android:color/white" />
+
+</com.basic.views.ShopCartView>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black" >
+
+    <RelativeLayout
+        android:id="@+id/videoLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <VideoView
+            android:id="@+id/firstVideo"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" >
+        </VideoView>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="272dp"
+        android:layout_height="166dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/login_logo_enrique"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btnLoginFacebook"
+            android:layout_width="257dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_login_fb" />
+
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="257dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_login_signup" />
+
+        <Button
+            android:id="@+id/btnSignIn"
+            android:layout_width="222dp"
+            android:layout_height="43dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_login_signin" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <ToggleButton
+                android:id="@+id/btnAgree"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/btn_check_terms_selector"
+                android:checked="true"
+                android:textOff=""
+                android:textOn="" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="I have read the"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tvPrivacy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:gravity="bottom"
+                        android:text=" privacy policy "
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="and"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="agree to the"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tvTerms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:gravity="top"
+                        android:text=" terms of service. "
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.basic.views.YoutubeView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/navigation_back" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="59dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@color/transparent"
+            android:text="Cancel"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnPrev"
+                android:layout_width="26dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/btn_prev_icon" />
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="26dp"
+                android:layout_height="30dp"
+                android:background="@drawable/btn_next_icon" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Meddle Part -->
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@android:color/white"
+            android:cacheColorHint="@android:color/white" />
+    </FrameLayout>
+
+</com.basic.views.YoutubeView>

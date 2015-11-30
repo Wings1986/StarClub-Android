@@ -1,0 +1,164 @@
+<FrameLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutHome"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".HomeActivity"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/layoutSubHome"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="35dp" 
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/searchframe"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1" >
+
+                <Button
+                    android:id="@+id/btnSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:text="Search for a friend..."
+                    android:textColor="@color/gray" />
+
+                <!--
+                <include
+                    android:id="@+id/actionBarMenu"
+                    layout="@layout/actionbar_menu" />
+
+                <SearchView
+                    android:id="@+id/search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                </SearchView>
+                -->
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/listMenu"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/searchframe"
+                android:background="@color/white"
+                android:divider="#CCCCCC"
+                android:dividerHeight="1dip"
+                android:fadingEdge="none"
+                android:listSelector="@drawable/list_selector" >
+            </ListView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutToMove"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+                <View
+                    android:id="@+id/shadowLayout"
+                    android:layout_width="8dp"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/gradient_bg_hover" 
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:id="@+id/slideLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_toRightOf="@+id/shadowLayout"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/titleLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <include
+                            android:id="@+id/actionBar"
+                            layout="@layout/actionbar_layout" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left|center_vertical"
+                            android:layout_marginLeft="5dp" >
+
+                            <ImageButton
+                                android:id="@+id/menuButton"
+                                android:layout_width="59dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/menu_btn_selector"
+                                android:onClick="openCloseMenu" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/toolLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginRight="5dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:id="@+id/btn_right"
+                                android:layout_width="65dp"
+                                android:layout_height="44dp"
+                                android:layout_gravity="right|center_vertical"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/btn_next"
+                                android:onClick="onRightItem"
+                                android:text="Next"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/boardLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/basicLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="#ffffff"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/gestureLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="#0000ff"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/mediaLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="#ff0000"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+</FrameLayout>

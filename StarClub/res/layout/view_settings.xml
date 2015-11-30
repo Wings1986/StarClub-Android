@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.basic.views.SettingView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="right|center_vertical"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/navigation_back"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Settings"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/btn_back" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="65dp"
+            android:layout_height="44dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/btn_next"
+            android:text="Save"
+            android:textColor="@color/black" />
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/layoutField"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#b2b2b2" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:background="#f8f8f8" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#b2b2b2" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Full Name"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/editName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#00ffffff"
+                        android:hint="Enter Full Name"
+                        android:inputType="textPersonName"
+                        android:textSize="16dp" >
+                    </EditText>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#b2b2b2" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/editEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#00ffffff"
+                        android:hint="Enter Email Address"
+                        android:inputType="textEmailAddress"
+                        android:textSize="16dp" >
+                    </EditText>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#b2b2b2" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Password"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/editPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#00ffffff"
+                        android:hint="Enter Password"
+                        android:inputType="textPassword"
+                        android:textSize="16dp" >
+                    </EditText>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#b2b2b2" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Birthday"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/editBirthday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#00ffffff"
+                        android:hint="Enter Birthday"
+                        android:inputType="textPersonName"
+                        android:textSize="16dp" >
+                    </EditText>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#b2b2b2" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Gender"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="16dp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/radio0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Male"
+                            android:textSize="16dp" />
+
+                        <RadioButton
+                            android:id="@+id/radio1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Female"
+                            android:textSize="16dp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#b2b2b2" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="City"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/editCity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#00ffffff"
+                        android:hint="Enter City"
+                        android:inputType="textPersonName"
+                        android:textSize="16dp" >
+                    </EditText>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#b2b2b2" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="State"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/editState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#00ffffff"
+                        android:hint="Enter State"
+                        android:inputType="textPersonName"
+                        android:textSize="16dp" >
+                    </EditText>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#b2b2b2" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Country"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/editCountry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#00ffffff"
+                        android:hint="Enter Country"
+                        android:inputType="textPersonName"
+                        android:textSize="16dp" >
+                    </EditText>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#b2b2b2" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/media_playbar" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="left|center_vertical"
+                        android:text="CREDITS"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/txtCredits"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="30dp"
+                            android:gravity="left|center_vertical"
+                            android:text="120"
+                            android:textColor="#FD7C08"
+                            android:textSize="23dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="left|center_vertical"
+                            android:text="in your bank"
+                            android:textColor="@color/black"
+                            android:textSize="20dp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnBuyMore"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/btn_buymore" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/media_playbar" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center_vertical"
+                    android:text="SOCIAL SHARING"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="39dp"
+                    android:layout_height="39dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="30dp"
+                    android:background="@drawable/facebook_icon"
+                    android:gravity="left|center_vertical" />
+
+                <FrameLayout
+                    android:id="@+id/layoutFBShare"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/btn_fbshare" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="left|center_vertical"
+                        android:text="Post to Facebook"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#3B5999"
+                        android:textSize="18dp" />
+                </FrameLayout>
+
+                <ToggleButton
+                    android:id="@+id/btnFacebook"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_check_selector"
+                    android:checked="true"
+                    android:textOff=""
+                    android:textOn="" 
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="39dp"
+                    android:layout_height="39dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="30dp"
+                    android:background="@drawable/twitter_icon"
+                    android:gravity="left|center_vertical" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="Post to Twitter"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#1bb2e9"
+                    android:textSize="18dp" />
+
+                <ToggleButton
+                    android:id="@+id/btnTwitter"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_check_selector"
+                    android:checked="true"
+                    android:textOff=""
+                    android:textOn="" 
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/media_playbar" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="SIGN OUT"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="16dp" />
+
+                <Button
+                    android:id="@+id/btnSignOut"
+                    android:layout_width="65dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_next"
+                    android:text="Sign Out"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp" >
+
+                <TextView
+                    android:id="@+id/tvVersion"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:text="version"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</com.basic.views.SettingView>

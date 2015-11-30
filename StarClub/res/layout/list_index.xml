@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="80dp"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="15dp"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="5dp" >
+
+        <ImageView
+            android:id="@+id/ivPhoto"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:background="@drawable/inbox_unread"
+            android:scaleType="centerCrop" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="1" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:weightSum="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/txtUserName"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.8"
+                    android:gravity="left|center_vertical"
+                    android:text="Ian Harris"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+                
+                <TextView
+                    android:id="@+id/txtTimeStamp"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.2"
+                    android:gravity="right|center_vertical"
+                    android:text="10"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/gray"
+                    />
+                
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5" >
+
+                <TextView
+                    android:id="@+id/txtMessage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical|left"
+                    android:maxLines="1"
+                    android:text="Hi, How are you"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/gray" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

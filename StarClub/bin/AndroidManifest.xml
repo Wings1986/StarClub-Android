@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.starclub.enrique"
+    android:versionCode="2"
+    android:versionName="1.1" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="14" />
+
+    <!-- In-app purchase -->
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <!-- Quantcast SDK -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- push notification -->
+
+
+    <!-- App receives GCM messages. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.starclub.enrique.permission.C2D_MESSAGE" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    
+    <permission
+        android:name="com.starclub.enrique.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <application
+        android:name=".UILApplication"
+        android:icon="@drawable/ic_enrique_dev"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true" >
+            <intent-filter>
+                <data android:scheme="com.myapp.starclub.enrique" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.starclub.enrique.login.MainLogInActivity" >
+        </activity>
+        <activity android:name="com.starclub.enrique.login.MainSignUpActivity" />
+        <activity android:name="com.starclub.enrique.login.AvatarActivity" />
+        <activity android:name="com.starclub.enrique.login.MainSignInActivity" />
+        <activity android:name="com.starclub.enrique.login.MainTermsActivity" />
+        <activity
+            android:name="com.starclub.enrique.PlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.starclub.enrique.VideoActivity" />
+        <activity android:name="com.starclub.enrique.BuyActivity" />
+        <activity android:name="com.starclub.enrique.FBShareActivity" />
+
+        <activity
+
+android:name="com.share.facebook.ui.FBMainActivity"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        
+<activity
+            android:name="com.facebook.LoginActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- AdMobActivity definition -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
+        <!--
+        ======================================================================
+        					push notification
+        ======================================================================
+        -->
+
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.starclub.enrique" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".GCMIntentService" />
+
+        <!--
+        ======================================================================
+        					AVIARY - REQUIRED ENTRIES
+        ======================================================================
+        -->
+
+
+        <!-- Main editor -->
+        <activity
+            android:name="com.aviary.android.feather.FeatherActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:finishOnTaskLaunch="true"
+            android:hardwareAccelerated="true"
+            android:process=":standalone"
+            android:screenOrientation="portrait"
+            android:theme="@style/AviaryTheme"
+            android:uiOptions="splitActionBarWhenNarrow" />
+
+        <!-- Alert -->
+        <activity
+            android:name="com.aviary.android.feather.AlertActivity"
+            android:launchMode="standard"
+            android:noHistory="true"
+            android:theme="@style/AviaryTheme.Dialog" >
+            <intent-filter>
+                <action android:name="aviary.intent.action.ALERT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!--
+        	Required for the hi-res image processing
+        	The "android:authorities" attribute must be unique, so please use your app's package path in this way:
+        	android:authorities="{your.package.name}.HiResProvider" 
+        -->
+        <provider
+            android:name="com.aviary.android.feather.library.providers.FeatherContentProvider"
+            android:authorities="com.starclub.enrique.HiResProvider"
+            android:exported="false"
+            android:process=":standalone" >
+        </provider>
+
+        <!-- CDS Content Service -->
+        <service
+            android:name="com.aviary.android.feather.cds.AviaryCdsService"
+            android:exported="false"
+            android:process=":aviarycds" >
+            <intent-filter>
+                <action android:name="aviary.intent.action.CDS_DOWNLOAD_START" />
+                <action android:name="aviary.intent.action.CDS_RESTORE_USER_ITEMS" />
+            </intent-filter>
+        </service>
+
+        <!--
+			Cds Content Provider, 
+			NOTE that the "authorities" value MUST be formatted in this way:
+			android:authorities="{your.packagename}.AviaryCdsProvider"
+        -->
+        <provider
+            android:name="com.aviary.android.feather.cds.AviaryCdsProvider"
+            android:authorities="com.starclub.enrique.AviaryCdsProvider"
+            android:exported="false"
+            android:process=":aviarycds"
+            android:syncable="true" />
+
+        <!-- CDS Download Receiver -->
+        <receiver
+            android:name="com.aviary.android.feather.cds.AviaryCdsReceiver"
+            android:process=":aviarycds" >
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+
+        <!--
+        	get your Aviary API Key for free at http://aviary.com/android
+        	and uncomment the following section, replacing "your_api_key_here" with your api key 
+        -->
+
+        <meta-data
+            android:name="com.aviary.android.feather.v1.API_KEY"
+            android:value="5d2ce36670fb2203" />
+
+        <!--
+        ======================================================================
+        						END AVIARY ENTRIES
+        ======================================================================
+        -->
+
+
+<!-- 			Quantcast SDK  -->
+        <receiver
+            android:name="com.quantcast.measurement.service.QCReferrerReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

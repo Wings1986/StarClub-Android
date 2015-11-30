@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.basic.views.PhotoDetailView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:gesture-image="http://schemas.polites.com/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <!-- Meddle Part -->
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center" >
+
+            <!--
+            <ImageView
+                android:id="@+id/imagePhoto"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/descr_image"
+                android:src="@drawable/demo_image"
+                />
+            -->
+
+            <com.mycom.lib.gesture.imageview.GestureImageView
+                android:id="@+id/imagePhoto"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                gesture-image:max-scale="10.0"
+                gesture-image:min-scale="0.1"
+                gesture-image:strict="true" />
+
+            <ProgressBar
+                android:id="@+id/progressPhoto"
+                style="@style/ProgressBarStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:indeterminate="false"
+                android:max="100" />
+        </FrameLayout>
+        
+        <FrameLayout
+            android:id="@+id/titleLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:layout_gravity="top"
+            android:background="@drawable/navigation_back" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Photo"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="5dp" >
+
+                <Button
+                    android:id="@+id/btnBack"
+                    android:layout_width="59dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@color/transparent"
+                    android:text="Cancel"
+                    android:textSize="15dp" />
+            </LinearLayout>
+        </FrameLayout>
+
+        
+
+        <LinearLayout
+            android:id="@+id/bottomLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="Photo"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black" />
+
+            <!-- Share -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="38dp"
+                android:background="@drawable/photo_cell_3"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <LinearLayout
+                    android:id="@+id/layoutComment"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.55" >
+
+                    <TextView
+                        android:id="@+id/txtComment"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:text="No Comments"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutAddComment"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.23"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/comment" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutShare"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.22"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/share_new" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</com.basic.views.PhotoDetailView>

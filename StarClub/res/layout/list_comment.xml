@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <com.mycom.lib.CircleImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginLeft="7dp"
+        border_color="@color/white"
+        border_width="2dp"
+        android:scaleType="centerCrop" />
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtUserName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="username"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtMessage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="I love message"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/gray" />
+
+        <TextView
+            android:id="@+id/txtTimeStamp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="right"
+            android:text="14 hour ago"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/gray"
+            android:textSize="11dp" />
+    </LinearLayout>
+
+</LinearLayout>

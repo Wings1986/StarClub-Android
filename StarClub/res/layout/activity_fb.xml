@@ -1,0 +1,64 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <!-- Login to facebook -->
+
+            <Button
+                android:id="@+id/button_login"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="login"
+                android:textColor="#000000" 
+                />
+
+            <!-- Status of login/logout -->
+
+            <TextView
+                android:id="@+id/text_status"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="logout"
+                android:gravity="center"
+                android:textColor="#000000" />
+
+            <!-- Logout to facebook -->
+
+            <Button
+                android:id="@+id/button_logout"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="logout"
+                android:textColor="#000000"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- Publish Feed -->
+        
+        <Button
+                android:id="@+id/button_publish_photo"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="publish" 
+                android:textColor="#000000"
+                android:visibility="gone"/>
+    </LinearLayout>
+
+</ScrollView>

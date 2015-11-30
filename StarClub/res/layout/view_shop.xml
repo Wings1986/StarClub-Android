@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.basic.views.ShopView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="36dp"
+        android:background="@drawable/media_playbar" >
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="36dp"
+        android:background="@color/white" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal" >
+
+            <ToggleButton
+                android:id="@+id/btnList"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/btn_list_selector"
+                android:textOff=""
+                android:textOn="" />
+
+            <ToggleButton
+                android:id="@+id/btnGrid"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/btn_grid_selector"
+                android:textOff=""
+                android:textOn="" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnViewCart"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/btn_viewcart" />
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/line" />
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:horizontalSpacing="4dip"
+        android:numColumns="2"
+        android:padding="4dip"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="4dip" />
+
+</com.basic.views.ShopView>
